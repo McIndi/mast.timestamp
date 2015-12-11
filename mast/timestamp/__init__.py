@@ -1,5 +1,8 @@
-#!/usr/bin/env python
-
+"""
+This module provides one class `Timestamp` which provides several
+convenience methods for getting at various representations of
+the current timestamp.
+"""
 from time import time
 from datetime import datetime
 
@@ -9,7 +12,20 @@ class Timestamp(object):
     of Timestamp takes the time at initialization and captures the moment in
     epoch format using time.time(), after initialization, a number of
     convenience methods allow access to different formats of representing that
-    time."""
+    time.
+
+    Usage:
+
+        :::python
+        from mast.timestamp import Timestamp
+        t = Timestamp()
+        print t.epoch
+        print t.friendly
+        print t.timestamp
+        print t.short
+        print str(t)
+        print int(t)
+    """
     def __init__(self):
         """Initialization function, catpture the current time in epoch format
         then create a timestamp object from datetime.fromtimestamp()."""
