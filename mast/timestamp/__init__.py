@@ -59,10 +59,7 @@ class Timestamp(object):
 
     def strftime(self, _format):
         """Return the timestamp in a format specified by the _format param.
-        This should be a string following the rules here:
-
-            https://docs.python.org/2/library/datetime.html#\
-            strftime-and-strptime-behavior"""
+        This should be a string following the rules [here](https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior):"""
         return self._timestamp.strftime(_format)
 
     def __str__(self):
